@@ -1,17 +1,3 @@
-![techhub-blog](./banner.png)
-
-# TechHub-Blog
-
-A complete blog website created with `JAMstack`. ([Gatsby.js](https://www.gatsbyjs.org/) & [Sanity.io](https://sanity.io)).
-
-Made with ❤️ by [Shaif Arfan][arfan-ig]
-
-- Live Preview: [http://techhub-blog.vercel.app/][preview]
-- YouTube Tutorial: [Coming Soon][wc-yt]
-
----
-
-## Project Details
 
 TechHub-blog is a complete tech blog website. Here we will see three post types: `blogs`, `categories`, and `authors`. We will create relations between these three post types. So that we can create a blog post with a category and an author. Also we will make a `search feature` where we can search against all these three post types.
 
