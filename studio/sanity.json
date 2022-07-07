@@ -5,7 +5,7 @@
     "dataset": "production"
   },
   "project": {
-    "name": "birblog"
+    "name": "speaker's library"
   },
   "plugins": [
     "@sanity/base",
