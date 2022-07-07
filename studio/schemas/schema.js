@@ -6,8 +6,22 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 // import custom schema
 
 import blog from './documents/blog';
+import author from './documents/author';
+import category from './documents/catagory';
+// import custom objects
+
+import customImage from './objects/customImage';
+import bodyText from './objects/bodyText';
+import excerptText from './objects/excerptText';
 
 export default createSchema({
   name: 'default',
-  types: schemaTypes.concat([blog]),
+  types: schemaTypes.concat([
+    blog,
+    author,
+    category,
+    customImage,
+    bodyText,
+    excerptText,
+  ]),
 });

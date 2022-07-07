@@ -1,4 +1,5 @@
 import { GiNotebook } from 'react-icons/gi';
+import { format } from 'date-fns';
 
 export default {
   title: 'blog post',
@@ -16,13 +17,38 @@ export default {
     {
       title: 'Published at',
       name: 'publishedAt',
-      type: 'date',
+      type: 'datetime',
     },
     {
       title: 'Cover image',
       name: 'coverImage',
-      type: 'image',
-      options: { hotspot: true },
+      type: 'customImage',
+    },
+    {
+      title: 'Summary',
+      name: 'summary',
+      type: 'excerptText',
+    },
+    {
+      title: 'Blog Body',
+      name: 'blogBody',
+      type: 'bodyText',
     },
   ],
+  preview: {
+    select: {
+      image: 'coverImage',
+      title: 'title',
+      publishedAt: 'publishedAt',
+    },
+    prepare({ image, title, publishedAt }) {
+      return {
+        title,
+        media: image,
+        subtitle: publishedAt
+          ? format(new Date(publishedAt), 'p, dd/MM/yyyy')
+          : '',
+      };
+    },
+  },
 };
