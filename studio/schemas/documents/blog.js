@@ -26,7 +26,7 @@ export default {
       of: [
         {
           type: 'reference',
-          to: [{ type: 'catagory' }],
+          to: [{ type: 'category' }],
         },
       ],
     },
