@@ -10,13 +10,19 @@ export default {
   },
   fields: [
     {
-      title: 'Alt-text',
+      title: 'Alt Text',
       name: 'alt',
       type: 'string',
-      validation: (Rule) => Rule.error('Alt-text cant be empty').required(),
+      validation: (Rule) => Rule.error("Alt text can't be empty").required(),
       options: {
         isHighlighted: true,
       },
     },
   ],
+  preview: {
+    select: {
+      imageUrl: 'asset.url',
+      alt: 'alt',
+    },
+  },
 };

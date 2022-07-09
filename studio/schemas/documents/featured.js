@@ -13,7 +13,7 @@ export default {
     },
     {
       name: 'blogs',
-      title: 'Featured blogs',
+      title: 'Featured Blogs',
       type: 'array',
       of: [
         {
@@ -22,13 +22,13 @@ export default {
         },
       ],
       validation: (Rule) => [
-        Rule.error('Every Item Should be Unique').unique(),
-        Rule.required().error('At Least One Item Is Required'),
+        Rule.error('Every Item should be unique').unique(),
+        Rule.required().error('At least one item is required'),
       ],
     },
     {
-      name: 'categories',
-      title: 'Featured Categories',
+      name: 'category',
+      title: 'Featured Top category',
       type: 'array',
       of: [
         {
@@ -37,8 +37,8 @@ export default {
         },
       ],
       validation: (Rule) => [
-        Rule.error('Every Item Should be Unique').unique(),
-        Rule.required().error('At Least One Item Is Required'),
+        Rule.error('Every Item should be unique').unique(),
+        Rule.required().error('At least one item is required'),
       ],
     },
   ],

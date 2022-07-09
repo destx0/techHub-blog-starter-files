@@ -1,8 +1,8 @@
 import { MdCategory } from 'react-icons/md';
 
 export default {
-  title: 'Category',
   name: 'category',
+  title: 'Category',
   type: 'document',
   icon: MdCategory,
   fields: [
@@ -13,10 +13,10 @@ export default {
     },
     {
       name: 'slug',
-      title: 'Slug',
+      title: 'SLUG',
       type: 'slug',
       options: {
-        source: 'name',
+        source: 'title',
         maxLength: 96,
       },
     },
@@ -27,8 +27,8 @@ export default {
     },
     {
       name: 'description',
-      title: 'description',
-      type: 'bodyText',
+      title: 'Description',
+      type: 'richText',
     },
   ],
   preview: {

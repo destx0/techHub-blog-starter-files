@@ -1,21 +1,28 @@
-import { GiNotebook } from 'react-icons/gi';
 import { format } from 'date-fns';
+import { GiNotebook } from 'react-icons/gi';
 
 export default {
-  title: 'blog post',
+  title: 'Blog Post',
   name: 'blog',
   type: 'document',
   icon: GiNotebook,
   fields: [
-    { title: 'Title', name: 'title', type: 'string' },
+    {
+      title: 'Title',
+      name: 'title',
+      type: 'string',
+    },
     {
       title: 'Slug',
       name: 'slug',
       type: 'slug',
-      options: { source: 'title', maxLength: 30 },
+      options: {
+        source: 'title',
+        maxLength: 96,
+      },
     },
     {
-      title: 'Published at',
+      title: 'Published At',
       name: 'publishedAt',
       type: 'datetime',
     },
@@ -37,19 +44,20 @@ export default {
       to: [{ type: 'author' }],
     },
     {
-      title: 'Cover image',
+      title: 'Cover Image',
       name: 'coverImage',
       type: 'customImage',
     },
     {
-      title: 'Summary',
-      name: 'summary',
-      type: 'excerptText',
+      title: 'Excerpt',
+      name: 'excerpt',
+      type: 'normalText',
+      description: 'A short description of the blog post',
     },
     {
       title: 'Blog Body',
-      name: 'blogBody',
-      type: 'bodyText',
+      name: 'body',
+      type: 'richText',
     },
   ],
   preview: {
@@ -63,7 +71,7 @@ export default {
         title,
         media: image,
         subtitle: publishedAt
-          ? format(new Date(publishedAt), 'p, dd/MM/yyyy')
+          ? format(new Date(publishedAt), 'p, dd/MM/yyy')
           : '',
       };
     },
